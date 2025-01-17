@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent van Gogh Biography and Works</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vincent van Gogh Biography and Works</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('biography')">Biography</a> |
+        <a href="#" onclick="showSection('works')">Works</a> |
+        <a href="#" onclick="showSection('exhibitions')">Exhibitions</a> |
+        <a href="#" onclick="showSection('links')">Links</a> |
+        <a href="#" onclick="showSection('management')">Management</a>
+    </nav>
+    <aside>
+        <div id="biography-menu" class="hidden">
+            <h3>Biography Menu</h3>
+            <p>Details about the painter's life.</p>
+        </div>
+        <div id="works-menu" class="hidden">
+            <h3>Works Menu</h3>
+            <p>Categories of paintings:</p>
+            <ul>
+                <li><a href="#" onclick="showWorksCategory('landscapes')">Landscapes</a></li>
+                <li><a href="#" onclick="showWorksCategory('portraits')">Portraits</a></li>
+            </ul>
+        </div>
+        <div id="exhibitions-menu" class="hidden">
+            <h3>Exhibitions Menu</h3>
+			<p>Recent Van Gogh exhibitions.</p>
+        </div>
+        <div id="links-menu" class="hidden">
+			<h3>Links Menu</h3>
+			<p>Links for the Biography, Works and Exhibitions.</p>
+		</div>
+        <div id="management-menu" class="hidden">
+            <h3>Management Menu</h3>
+            <p>Admin tools and options.</p>
+        </div>
+    </aside>
+    <main>
+        <div id="biography" class="hidden">
+            <h2>Biography</h2>
+            <p>Vincent van Gogh (born March 30, 1853, Zundert, Netherlands—died July 29, 1890, Auvers-sur-Oise, near Paris, France) was a Dutch painter, generally considered the greatest after Rembrandt van Rijn, and one of the greatest of the Post-Impressionists. The striking color, emphatic brushwork, and contoured forms of his work powerfully influenced the current of Expressionism in modern art. Van Gogh’s art became astoundingly popular after his death, especially in the late 20th century, when his work sold for record-breaking sums at auctions around the world and was featured in blockbuster touring exhibitions. In part because of his extensive published letters, van Gogh has also been mythologized in the popular imagination as the quintessential tortured artist.
+Early life
+
+Van Gogh, the eldest of six children of a Protestant pastor, was born and reared in a small village in the Brabant region of the southern Netherlands. He was a quiet, self-contained youth, spending his free time wandering the countryside to observe nature. At 16 he was apprenticed to The Hague branch of the art dealers Goupil and Co., of which his uncle was a partner.
+
+Van Gogh worked for Goupil in London from 1873 to May 1875 and in Paris from that date until April 1876. Daily contact with works of art aroused his artistic sensibility, and he soon formed a taste for Rembrandt, Frans Hals, and other Dutch masters, although his preference was for two contemporary French painters, Jean-François Millet and Camille Corot, whose influence was to last throughout his life. Van Gogh disliked art dealing. Moreover, his approach to life darkened when his love was rejected by a London girl in 1874. His burning desire for human affection thwarted, he became increasingly solitary. He worked as a language teacher and lay preacher in England and, in 1877, worked for a bookseller in Dordrecht, Netherlands. Impelled by a longing to serve humanity, he envisaged entering the ministry and took up theology; however, he abandoned this project in 1878 for short-term training as an evangelist in Brussels. A conflict with authority ensued when he disputed the orthodox doctrinal approach. Failing to get an appointment after three months, he left to do missionary work among the impoverished population of the Borinage, a coal-mining region in southwestern Belgium. There, in the winter of 1879–80, he experienced the first great spiritual crisis of his life. Living among the poor, he gave away all his worldly goods in an impassioned moment; he was thereupon dismissed by church authorities for a too-literal interpretation of Christian teaching.
+
+Penniless and feeling that his faith was destroyed, he sank into despair and withdrew from everyone. “They think I’m a madman,” he told an acquaintance, “because I wanted to be a true Christian. They turned me out like a dog, saying that I was causing a scandal.” It was then that van Gogh began to draw seriously, thereby discovering in 1880 his true vocation as an artist. Van Gogh decided that his mission from then on would be to bring consolation to humanity through art. “I want to give the wretched a brotherly message,” he explained to his brother Theo. “When I sign [my paintings] ‘Vincent,’ it is as one of them.” This realization of his creative powers restored his self-confidence.</p>
+        </div>
+        <div id="works" class="hidden">
+            <h2>Works</h2>
+            <div id="works-content">
+                <p>Select a category from the menu to view the painter's works.</p>
+            </div>
+        </div>
+        <div id="exhibitions" class="hidden">
+            <h2>Exhibitions</h2>
+            <div id="exhibitions-content"></div>
+        </div>
+        <div id="links" class="hidden">
+            <h2>Links</h2>
+            <div id="links-content"></div>
+        </div>
+	    <div id="management" class="hidden">
+		    <h2>Management</h2>
+		    <div id="login-section" class="hidden">
+			    <h2>Login</h2>
+			    <form id="login-form">
+				    <label for="username">Username:</label>
+				    <input type="text" id="username" name="username" required>
+    
+				    <label for="password">Password:</label>
+				    <input type="password" id="password" name="password" required>
+    
+				    <button type="submit">Login</button>
+			    </form>
+			    <p id="login-error" style="color: red;"></p>
+		    </div>
+
+		    <div id="logout-section" class="hidden">
+			    <h2>Welcome, <span id="logged-in-user"></span>!</h2>
+			    <button id="logout-button">Logout</button>
+		    </div>		
+    
+		<h3>Add Exhibition</h3>
+		<form id="add-exhibition-form">
+			<label for="title">Title:</label>
+			<input type="text" id="title" name="title" required>
+    
+			<label for="description">Description:</label>
+			<textarea id="description" name="description" required></textarea>
+    
+			<button type="submit">Add Exhibition</button>
+		</form>
+
+		<h3>Manage Exhibitions</h3>
+		<div id="exhibitions-list"></div>
+	</div>
+	</div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
